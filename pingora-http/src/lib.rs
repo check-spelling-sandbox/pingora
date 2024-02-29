@@ -53,7 +53,7 @@ HMap({
 The order how HeaderMap iter over its items is "arbitrary, but consistent".
 Hopefully this property makes sure this map of header names always iterates in the
 same order of the map of header values.
-This idea is inspaired by hyper @nox
+This idea is inspired by hyper @nox
 */
 type CaseMap = HMap<CaseHeaderName>;
 
@@ -170,7 +170,7 @@ impl RequestHeader {
     /// Insert the header name and value to `self`.
     ///
     /// Different from [Self::append_header()], this method will replace all other existing headers
-    /// under the same name (case insensitive).
+    /// under the same name (case-insensitive).
     pub fn insert_header(
         &mut self,
         name: impl IntoCaseHeaderName,
@@ -399,7 +399,7 @@ impl ResponseHeader {
     /// Insert the header name and value to `self`.
     ///
     /// Different from [Self::append_header()], this method will replace all other existing headers
-    /// under the same name (case insensitive).
+    /// under the same name (case-insensitive).
     pub fn insert_header(
         &mut self,
         name: impl IntoCaseHeaderName,
